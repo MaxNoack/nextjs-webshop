@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Image from 'next/image';
-import MenuComponent from './MenuComponent';
+import Menu from './Menu';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 import Drawer from '@material-ui/core/Drawer';
@@ -69,7 +68,7 @@ const Navbar = ({ pages }) => {
   return (
     <AppBar position="static">
       <Toolbar className={classes.bar}>
-        <MenuComponent pages={pages} />
+        <Menu pages={pages} />
         <Link href={'/'} passHref>
           <a className={classes.link}>
             <div className={classes.logoContainer}>
