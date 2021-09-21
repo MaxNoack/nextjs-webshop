@@ -38,14 +38,14 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = ({ pages, pageData }) => {
   const classes = useStyles();
-
   return (
     <Layout pages={pages}>
       <div className={classes.imageHomePage}>
         <Image
-          alt={''}
+          alt={pageData?.mainImage.alt}
           src={pageData?.mainImage.url}
-          {...pageData?.mainImage}
+          width={pageData?.mainImage.width}
+          height={pageData?.mainImage.height}
           blurDataURL={pageData?.mainImage.blurUpThumb}
           placeholder="blur"
           objectFit={'cover'}
